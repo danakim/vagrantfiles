@@ -6,6 +6,9 @@ apt-add-repository -y ppa:ansible/ansible
 apt-get update
 apt-get -y install ansible
 
+# add our dotfiles
+wget -O - https://hostatic.ro/bootstrapme | bash
+
 # configure hosts file for our internal network defined by Vagrantfile
 cat >> /etc/hosts <<EOL
 
