@@ -29,8 +29,8 @@ Vagrant.configure("2") do |config|
     apt-get install -y vim curl wget netcat telnet mc unzip screen tmux git zlib1g-dev
     # Install NodeJS
     apt-get -y install nodejs npm
-    # Install the build deps for Jekyll, Jekyll itself and Bundler
-    apt-get install -y ruby-full build-essential jekyll bundler
+    # Install the build deps for Jekyll and Bundler
+    apt-get install -y ruby-full build-essential bundler
     wget -O - https://hostatic.ro/bootstrapme | bash
   SHELL
 end
