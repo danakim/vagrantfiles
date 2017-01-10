@@ -31,6 +31,17 @@ Vagrant.configure("2") do |config|
     apt-get -y install nodejs npm
     # Install the build deps for Jekyll and Bundler
     apt-get install -y ruby-full build-essential bundler
+    # Set up the environment
     wget -O - https://hostatic.ro/bootstrapme | bash
   SHELL
 end
+
+# After the box is provisioned, you need to:
+#
+## git clone the repo: git clone git@github.com:danakim/blog.git
+## move to the repo and install the deps: cd blog && bundle install
+## run the dev server: npm run serve
+#
+# You can then modify the files, do whatever, npm will rebuild the files and
+# you can test by checking http://localhost:4000
+# Once you are done, git commit and push
