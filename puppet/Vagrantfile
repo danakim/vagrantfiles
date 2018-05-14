@@ -25,8 +25,8 @@ Vagrant.configure("2") do |config|
     #apt-get -y upgrade
     service exim4 stop
     apt-get -y remove --purge vim-tiny exim4 exim4-base exim4-config exim4-daemon-light
-    apt-get install -y vim curl wget netcat telnet mc unzip screen tmux
-    wget -O - https://hostatic.ro/bootstrapme | bash
+    apt-get install -y vim curl wget netcat telnet mc unzip screen tmux git
+    wget --quiet -O - https://hostatic.ro/bootstrapme | bash
     apt-get -y install puppet puppet-common puppetmaster puppetmaster-common puppet-lint vim-puppet
     wget https://apt.puppetlabs.com/puppetlabs-release-pc1-jessie.deb && dpkg -i puppetlabs-release-pc1-jessie.deb && apt-get update
     apt-get -y install puppetserver puppet-agent puppet-lint vim-puppet

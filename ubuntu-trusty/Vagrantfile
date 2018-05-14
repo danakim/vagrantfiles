@@ -26,6 +26,6 @@ Vagrant.configure("2") do |config|
     service exim4 stop
     apt-get -y remove --purge vim-tiny exim4 exim4-base exim4-config exim4-daemon-light
     apt-get install -y vim curl wget netcat telnet mc unzip screen tmux git
-    wget -O - https://hostatic.ro/bootstrapme | bash
+    wget --quiet -O - https://hostatic.ro/bootstrapme | bash
   SHELL
 end
